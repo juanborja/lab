@@ -7,12 +7,10 @@ package TPO1.patrones;
 
 /**
  *
- * @author juan
+ * @author darian
  */
-public class main {
-    public static void main(String[] args) {
-        //Works as client
-        Bank bank = new Bank();
-        bank.request(12500); //initiates the resolution of the request
-    }
+public interface Handler {
+    public void setNext(Handler handler);
+    public Handler getNext();
+    public void request(int amount);
 }
