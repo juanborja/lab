@@ -39,14 +39,15 @@ public class Translator {
     
     
     
-    public static void main(String[] args) throws IOException {
+    /*public static void main(String[] args) throws IOException {
         String text = "Hello world! I am Darian";
         //Translated text:
         System.out.println("Translated text: " + translate("en", "es", text));
         System.out.println("Translated text: " + translate("en", "ja", text));
-    }
+    }*/
 
-    private static String translate(String langFrom, String langTo, String text) throws IOException {
+    public static String translate(String langFrom, String langTo, String text) throws IOException {
+        //Cuando el lenguaje de entrada especificado no es correcto, devuelvo el mismo texto a traducir sin operar
         String urlStr = "https://script.google.com/macros/s/AKfycbzTOq0M69opJUEy9xBZVV517bCe_RkNj9_m2yhJzqb6UmkgYCQ/exec" +
                 "?q=" + URLEncoder.encode(text, "UTF-8") +
                 "&target=" + langTo +
@@ -62,6 +63,7 @@ public class Translator {
         }
         in.close();
         return response.toString();
+        
     }
 
 }
