@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package TPO1.patrones;
+package TPO1.patrones.example;
 
 /**
  *
  * @author darian
  */
-public class TeamLiderExecutive implements Handler{
-    private Handler next;
+public class Manager implements Handler{
+   private Handler next;
     
     @Override
     public Handler getNext(){
@@ -22,10 +22,10 @@ public class TeamLiderExecutive implements Handler{
     }
     @Override
     public void request(int amount){
-        if(amount>10000 && amount <=50000){
-            System.out.println("I can handle it, TeamLiderExecutive");
+        if(amount>50000 && amount <=100000){
+            System.out.println("I can handle it, Manager");
         }else{
             next.request(amount);
         }
-    }
+    } 
 }

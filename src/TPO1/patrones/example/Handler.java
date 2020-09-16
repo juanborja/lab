@@ -3,9 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package TPO1.patrones;
-
-import java.io.IOException;
+package TPO1.patrones.example;
 
 /**
  *
@@ -14,5 +12,5 @@ import java.io.IOException;
 public interface Handler {
     public void setNext(Handler handler);
     public Handler getNext();
-    public void translateToSp(String text)throws IOException;
+    public void request(int amount);
 }

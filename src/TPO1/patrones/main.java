@@ -5,14 +5,25 @@
  */
 package TPO1.patrones;
 
+import java.io.IOException;
+
 /**
  *
- * @author juan
+ * @author darian
  */
 public class main {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws IOException {
         //Works as client
-        Bank bank = new Bank();
-        bank.request(12500); //initiates the resolution of the request
+        TranslatorApp translatorApp = new TranslatorApp();
+
+        String []toTranslate = {"I am english", "Ich bin Deutscher", "je suis Français","Hola mundo, soy español","Ciao mondo","Olá mundo, sou portugues","Jeg er norsk","卵"};
+       
+        for (String text : toTranslate) {
+            translatorApp.translateToSp(text);
+        }
+        //translatorApp.translateToSp("Ciao mondo");
+        
     }
+
 }
