@@ -9,7 +9,7 @@ import java.io.IOException;
 
 /**
  *
- * @author darian
+ * @author Darian y Juan
  */
 public class main {
 
@@ -17,12 +17,11 @@ public class main {
         //Works as client
         TranslatorApp translatorApp = new TranslatorApp();
 
-        String []toTranslate = {"I am english", "Ich bin Deutscher", "je suis Français","Hola mundo, soy español","Ciao mondo","Olá mundo, sou portugues","Jeg er norsk","卵"};
+        String []toTranslate = {"I am english", "Ich bin Deutscher", "je suis Français","Ciao mondo","Olá mundo, sou portugues","Norsk skrevet tekst","卵"};
        
         for (String text : toTranslate) {
             translatorApp.translateToSp(text);
         }
-        //translatorApp.translateToSp("Ciao mondo");
         
     }
 

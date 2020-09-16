@@ -9,7 +9,7 @@ import java.io.IOException;
 
 /**
  *
- * @author darian
+ * @author Darian y Juan
  * Orden de la cadena segun idiomas mas hablados:
  * https://es.wikipedia.org/wiki/Anexo:Idiomas_por_el_total_de_hablantes
  */
@@ -42,9 +42,6 @@ public class TranslatorApp implements Handler{
         
         FromItalian italian = new FromItalian();
         german.setNext(italian);
-        
-        /*FromSpanish spanish = new FromSpanish();
-        italian.setNext(spanish);*/
         
         next.translateToSp(text);
         System.out.println("\n");
