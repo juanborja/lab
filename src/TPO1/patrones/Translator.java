@@ -13,7 +13,7 @@ import java.net.URLEncoder;
 
 /**
  *
- * @author darian
+ * @author Darian y Juan
  */
 
 
@@ -26,25 +26,13 @@ public class Translator {
      *      "pt": Portugues
      *      "fr": Frances
      *      
-     * Hice este ejemplo usando google script, tiene una cuota maxima pero la 
-     * verdad que no entendí cual de los items afectaba a este ejemplo.
+     * Hice este ejemplo usando google script.
      * https://developers.google.com/apps-script/guides/services/quotas
-     * Esto solo es para probar como usarlo, no apliqué ningun patron.
      * 
      * 
      * @param args
      * @throws IOException 
      */
-    
-    
-    
-    
-    /*public static void main(String[] args) throws IOException {
-        String text = "Hello world! I am Darian";
-        //Translated text:
-        System.out.println("Translated text: " + translate("en", "es", text));
-        System.out.println("Translated text: " + translate("en", "ja", text));
-    }*/
 
     public static String translate(String langFrom, String langTo, String text) throws IOException {
         //Cuando el lenguaje de entrada especificado no es correcto, devuelvo el mismo texto a traducir sin operar
