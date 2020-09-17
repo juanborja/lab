@@ -5,13 +5,15 @@
  */
 package TPO1.concurrencia;
 
+import TPO1.concurrencia.Spotify.Artist;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.net.URLConnection;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.net.URL;
 
 /**
  *
@@ -31,4 +33,8 @@ public class utiles {
         }
         return response; 
     }
+    
+    
+    
+
 }

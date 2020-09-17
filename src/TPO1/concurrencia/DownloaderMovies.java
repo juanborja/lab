@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -16,10 +17,10 @@ import java.util.logging.Logger;
  *
  * @author juan
  */
-public class Downloader extends RecursiveAction{
+public class DownloaderMovies extends RecursiveAction{
 
     String data[];
-    Downloader(String[] data) {
+    DownloaderMovies(String[] data) {
 	this.data = data;	  
     }
     @Override
@@ -29,16 +30,14 @@ public class Downloader extends RecursiveAction{
                 String auxi = getMovie(data[0]);
                 System.out.println(auxi);
             } catch (IOException ex) {
-                Logger.getLogger(Downloader.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(DownloaderMovies.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         else{
             int mid = data.length/2;
-            if(data.length % 2 !=0){
-                mid++;
-            }
-            invokeAll(new Downloader(Arrays.copyOfRange(data, 0, mid)), 
-                 new Downloader(Arrays.copyOfRange(data, mid, data.length)));
+            if(data.length % 2 !=0)mid++;
+            invokeAll(new DownloaderMovies(Arrays.copyOfRange(data, 0, mid)), 
+                 new DownloaderMovies(Arrays.copyOfRange(data, mid, data.length)));
         }
     }
     
