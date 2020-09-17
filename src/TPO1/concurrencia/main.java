@@ -5,7 +5,7 @@
  */
 package TPO1.concurrencia;
 
-import static TPO1.concurrencia.utiles.getArtist;
+
 import static TPO1.concurrencia.utiles.getMovie;
 import java.io.IOException;
 import java.util.concurrent.ForkJoinPool;
@@ -16,20 +16,8 @@ import java.util.concurrent.ForkJoinPool;
  */
 public class main {
     public static void main(String[] args) throws IOException {
-       long time = System.currentTimeMillis();
-        String []artists = {"Charly García", "Serrat", "The Doors", "Pink Floyd", "The Beatles"};
-       
-        for (String artist : artists) {
-             String aux = getArtist(artist);
-            System.out.println(aux);
-        }
-        System.out.println("Tiempo no concurrente : "+(System.currentTimeMillis()-time));
-        time = System.currentTimeMillis();
-        ForkJoinPool.commonPool().invoke(new DownloaderSongs(artists));
-        System.out.println("Tiempo concurrente : "+(System.currentTimeMillis()-time));
-        time = System.currentTimeMillis();
+        long time = System.currentTimeMillis();
         String []titles = {"The Shawshank Redemption", "The Godfather", "The Godfather: Part II", "The Dark Knight", "12 Angry Men"};
-       
         for (String title : titles) {
              String aux = getMovie(title);
             System.out.println(aux);

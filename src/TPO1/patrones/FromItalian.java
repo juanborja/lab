@@ -28,11 +28,11 @@ public class FromItalian implements Handler{
         if(translatedText.equals(text)){
             //El texto traducido es igual al texto orginal(Idioma de origen incorrecto)
             System.out.println("El texto ingresado NO es un texto en Italiano.");
-            System.out.println("El texto ingresado NO puede ser traducido actualmente.");
+            System.out.println("\u001B[31mEl texto ingresado NO puede ser traducido actualmente.");
         }else{
             //El texto pudo ser traducido correctamente
             System.out.println("El texto ingresador fué traducido de Italiano a Español.");
-            System.out.println("Texto traducido: "+translatedText);
+            System.out.println("\u001B[32mTexto traducido: "+translatedText);
         }
     }
 }

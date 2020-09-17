@@ -32,7 +32,7 @@ public class FromGerman implements Handler{
         }else{
             //El texto pudo ser traducido correctamente
             System.out.println("El texto ingresador fué traducido de Alemán a Español.");
-            System.out.println("Texto traducido: "+translatedText);
+            System.out.println("\u001B[32mTexto traducido: "+translatedText);
         }
     }
 }
